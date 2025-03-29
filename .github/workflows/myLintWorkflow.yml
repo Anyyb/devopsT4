@@ -2,23 +2,23 @@ name: Lint
 on:
   pull_request:
     branches:
-      -main
-  workflow_dispatch:
+      - main
 
 jobs:
   lint:
     runs-on: ubuntu-latest
+
     steps:
-     - name: Checkout
-       uses: actions/checkout@v4.2.2
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-     - name: Use Node.js
-       uses: actions/setup-node@v4.2.2
-       with:
-        node-version: '20'
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-     - name: Install dependencies
-       run: npm install
+      - name: Install dependencies
+        run: npm install
 
-     - name: Run lint
-       run: npm run lint
+      - name: Run lint
+        run: npm run lint
