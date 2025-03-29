@@ -1,8 +1,10 @@
+var aPriceList;
 
-export const setPriceList = (priceList) => {
-  return priceList;
+export var setPriceList = (priceList) => {
+  aPriceList = priceList;
 };
 
-export const getPrice = (itemId, quantity) => {
+export var getPrice = (itemId, quantity) => {
   return 500;
 };
+
