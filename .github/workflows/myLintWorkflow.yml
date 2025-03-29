@@ -13,13 +13,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Go to app directory
+        run: cd lintingproject
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd lintingproject
+          npm install
 
       - name: Run lint
-        run: npm run lint
+        run: |
+          cd lintingproject
+          npm run lint
