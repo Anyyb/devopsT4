@@ -27,4 +27,6 @@ jobs:
           npm install
 
       - name: Run lint
-        run: npm run lint
+        run: |
+          cd lintingproject
+          npm run lint
